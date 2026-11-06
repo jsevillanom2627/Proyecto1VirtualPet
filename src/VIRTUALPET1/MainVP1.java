@@ -79,8 +79,9 @@ public class MainVP1 {
             System.out.println("  3. Comer (Eat)");
             System.out.println("  4. Aseo / Ducha (Clean)");
             System.out.println("  5. Atacar a Rival (Attack)");
+            System.out.println("  6. Bailar (Dance)");
             System.out.println("  0. Salir de la aplicación (Exit)");
-            System.out.print("Elija una opción (0-5): ");
+            System.out.print("Elija una opción (0-6): ");
 
             if (scanner.hasNextInt()) {
                 opcion = scanner.nextInt();
@@ -112,6 +113,10 @@ public class MainVP1 {
                             scanner.next();
                         }
                         break;
+                    case 6:
+                          jugador.bailar();
+                          break;
+
                     case 0:
                         salir = true;
                         System.out.println("\nGracias por participar en el simulador Virtual Pet de Guau Street.");

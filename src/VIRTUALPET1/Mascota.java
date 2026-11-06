@@ -45,6 +45,7 @@ public class Mascota {
     public int getPeso() { return peso; }
     public int getAnimo() { return animo; }
 
+
    // rerinicializar rival al derrotarlo
     public void reinicializarRival() {
         this.energia = 100;
@@ -128,6 +129,11 @@ public class Mascota {
         }
     }
 
+    public void bailar() {
+        System.out.println(this.nombre + " está bailando un mambo! 💃🕺");
+        this.energia -= 10;
+    }
+
    //limites de supervivencia
     public boolean estaMuerta() {
         return (this.energia <= 0 || this.energia >= 100 ||
@@ -135,6 +141,8 @@ public class Mascota {
                 this.peso <= 0    || this.peso >= 100    ||
                 this.animo <= 0   || this.animo >= 100);
     }
+
+
 
    //valores actuales con barras     toUpperCase()convierte los Valores a MAYUSCULAS
     public void mostrarEstado() {
